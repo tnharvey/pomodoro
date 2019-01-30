@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Pomodoro Clock</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+      crossorigin="anonymous">
+</head>
+<body>
+  <div class="grid">
+    <header>
+      <h1>Pomodoro Clock</h1>
+    </header>
+  
+    <div class="sidebar sidebar-left">
+      <div id="trackerContainer">
+          <div id="tracker1" class="task complete"></div>
+          <div id="tracker2" class="task incomplete"></div>
+          <div id="tracker3" class="task incomplete"></div>
+          <div id="tracker4" class="task incomplete"></div>
+        </div>
+    </div>
+  
+    <article>
+      <div class="container">
+        <div class="pomodoro">
+          <span class="digits minutes">25</span>
+          <span class ="digits">:</span>
+          <span class="digits seconds">00</span>
+        </div>
+        <div class="buttons">
+          <button id="playControl" class="play"><i class="fas fa-play"></i><i class="fas fa-pause hidden"></i></button>
+          <button id="stopControl" class="stop"><i class="fas fa-sync-alt"></i></i></button>
+        </div>
+      </div>
+    </article>
+  
+    <aside class="sidebar sidebar-right">
+      <div class="times">
+          <div class="session input">
+            <label for="sessionTime">Session</label><input id="sessionTime" type="number" min="5" max="60" step="5" value="25">
+          </div>
+          <div class="break input">
+            <label for="breakTime">Break</label><input id="breakTime" type="number" min="5" max="60" step="5" value="5">
+          </div>
+          <div class="longBreak input">
+            <label for="longBreakTime">Long Break</label><input id="longBreakTime" type="number" min="5" max="60" step="5" value="30">
+          </div>
+        </div>
+    </aside>
+    
+    <footer>
+    </footer>
+  </div>
+    <script src="script.js"></script>
+</body>
+</html>

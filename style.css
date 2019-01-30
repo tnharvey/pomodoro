@@ -1,0 +1,109 @@
+.grid {
+  display: grid;
+  grid-template-columns: 150px auto 150px;
+  grid-gap: 1em;
+}
+
+header, footer {
+  grid-column: 1 / 4;
+}
+
+@media all and (max-width: 700px) {
+  .sidebar,
+  article {
+    grid-column: 1 / 4;
+  }
+  header,
+  .sidebar-left {
+    height: 10vh!important;
+  }
+  article,
+  footer {
+    height: 20vh!important;
+  }
+}
+
+/* Demo Specific Styles */
+body {
+  margin: 0 auto;
+  max-width: 70em;
+  padding: 1em 0;
+  background-color: #FBF5F3;
+}
+
+header,
+.sidebar,
+article,
+footer {
+/*   background-color: grey; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25vh;
+}
+.container {
+  width: 50%;
+  height: 50%;
+  border-radius: 10px;
+  background-color: #006989;
+  padding: 30px;
+}
+
+.pomodoro {
+  width: 75%;
+  margin: 0 auto;
+  border-radius: 10px;
+  background-color: #272635;
+  text-align: center;
+  font-size: 2em;
+}
+
+.digits {
+  color: #FBF5F3;
+}
+
+.buttons {
+  text-align: center;
+  margin: 10px;
+}
+
+.minutes {}
+.seconds {}
+.play {
+  font-size: 1.2em;
+}
+.pause {
+  font-size: 1.2em;
+}
+.stop {
+  font-size: 1.2em;
+}
+.hidden {
+  display: none!important;
+}
+
+#trackerContainer {
+}
+
+.task {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  border-radius: 50%;
+  background-color: #99D5C9;
+}
+
+.complete {
+  background-color: #E28413;
+}
+
+input {
+  display: block;
+  margin: 0 auto;
+  width: 5em;
+  text-align: center;
+}
+.times {
+  text-align: center;
+  font-size: 1.5em;
+}
