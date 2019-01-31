@@ -13,7 +13,7 @@
 <body>
   <div class="grid">
     <header>
-      <h1 class="title">Pomodoro Timer</h1>
+      <h1 class="title">P<i class="fas fa-clock" style="color:#E28413;"></i>m<i class="fas fa-circle" style="color:#99D5C9;"></i>d<i class="fas fa-circle" style="color:#99D5C9;"></i>r<i class="fas fa-circle" style="color:#99D5C9;"></i></h1>
     </header>
   
     <div class="sidebar sidebar-left">
@@ -42,15 +42,34 @@
     <aside class="sidebar sidebar-right">
       <div class="times">
           <div class="session input">
-            <label for="sessionTime">Session</label><input id="sessionTime" type="number" min="5" max="60" step="5" value="25">
+            <label class ="label" for="sessionTime">Session</label>
+            <input class="numInput" id="sessionTime" type="number" min="5" max="60" step="5" value="25">
+            <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+            <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>  
           </div>
           <div class="break input">
-            <label for="breakTime">Break</label><input id="breakTime" type="number" min="5" max="60" step="5" value="5">
+            <label class ="label" for="breakTime">Break</label><input class="numInput" id="breakTime" type="number" min="5" max="60" step="5" value="5">
+            <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+            <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button> 
           </div>
           <div class="longBreak input">
-            <label for="longBreakTime">Long Break</label><input id="longBreakTime" type="number" min="5" max="60" step="5" value="30">
+            <label class ="label" for="longBreakTime">Long Break</label><input class="numInput" id="longBreakTime" type="number" min="5" max="60" step="5" value="30">
+            <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+            <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button> 
           </div>
         </div>
+      <audio id="cuckoo1">
+        <source src="sounds/Cuckoo_Clock_01.mp3" type="audio/mpeg">
+      </audio>
+      <audio id="cuckoo2">
+        <source src="sounds/Cuckoo_Clock_02.mp3" type="audio/mpeg">
+      </audio>
+      <audio id="cuckoo3">
+        <source src="sounds/Cuckoo_Clock_03.mp3" type="audio/mpeg">
+      </audio>
+      <audio id="cuckoo4">
+        <source src="sounds/Cuckoo_Clock_04.mp3" type="audio/mpeg">
+      </audio>
     </aside>
     
     <footer>

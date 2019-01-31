@@ -35,16 +35,19 @@ function stopTimer(timerObject) {
 function switchMode() {
   if (mode == "session") {
     if (sessions < 3) {
+      playAlarmAudio();
       mode = "break";
       minutes = breakTime;
       seconds = 0;
     } else {
+      playAlarmAudio();
       mode = "long break";
       minutes = longBreakTime;
       seconds = 0;
     }
   } else {
     if (mode == "long break") {
+      playAlarmAudio();
       sessions = 0;
       let tasks = document.getElementsByClassName("task");
       for (i = 0; i < tasks.length; i++) {
@@ -55,6 +58,7 @@ function switchMode() {
       document.querySelector("#tracker1").classList.add("complete");
       document.querySelector("#tracker1").classList.remove("incomplete");
     } else {
+      playAlarmAudio();
       sessions += 1;
       document.querySelector(".incomplete").classList.add("complete");
       document.querySelector(".incomplete").classList.remove("incomplete");
@@ -64,6 +68,26 @@ function switchMode() {
     seconds = 0;
   }
   runTimer();
+}
+
+function playAlarmAudio() {
+  switch(sessions) {
+    case 0:
+      document.getElementById("cuckoo1").play();
+      break;
+    case 1:
+      document.getElementById("cuckoo2").play();
+      break;
+    case 2:
+      document.getElementById("cuckoo3").play();
+      break;
+    case 3:
+      document.getElementById("cuckoo4").play();
+      break;
+    default:
+      console.log("Error playing audio, no or invalid session number passed. Session: " + session);
+      break;
+  }
 }
 
 function formatTime(time) {

@@ -16,10 +16,17 @@ header, footer {
   header,
   .sidebar-left {
     height: 10vh!important;
+    margin-bottom: 15px;
+    padding-left: 0px!important;
   }
-  article,
-  footer {
+  .sidebar-right {
+    padding-right: 0px!important;
+  }
+  article {
     height: 20vh!important;
+  }
+  footer {
+    height: 15vh!important;
   }
 }
 
@@ -42,12 +49,23 @@ footer {
   height: 25vh;
 }
 
+.sidebar-left {
+    padding-left: 15px;
+  }
+.sidebar-right {
+    padding-right: 15px;
+  }
 .title, .digits {
   font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
 }
 
-.input, input {
+.title {
+  border: 1px solid black;
+  padding: 5px 10px;
+}
+
+.input {
   font-family: 'Open Sans', sans-serif;
   text-transform: uppercase;
 }
@@ -58,6 +76,7 @@ footer {
   border-radius: 10px;
   background-color: #006989;
   padding: 30px;
+  margin-bottom: 45px;
 }
 
 .pomodoro {
@@ -67,6 +86,10 @@ footer {
   background-color: #272635;
   text-align: center;
   font-size: 2em;
+}
+
+.fa-clock, .fa-circle {
+  font-size: 0.6em;
 }
 
 .digits {
@@ -116,6 +139,13 @@ input {
   width: 5em;
   text-align: center;
   border-radius: 3px;
+  border:none;
+  outline: none;
+  border-style: solid;
+  padding: 5px;
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
+  font-size: 0.85em;
 }
 
 input:focus {
@@ -142,4 +172,64 @@ a {
 
 a:hover {
   color: #ECB068;
+}
+
+/* test removal of input arrows */
+
+input[type="number"] {
+  -webkit-appearance: textfield;
+     -moz-appearance: textfield;
+          appearance: textfield;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none;
+}
+
+/*  */
+.input {
+  display: grid;
+  grid-template-areas: "label label"
+                       "input plus"
+                       "input minus";
+}
+
+.plus {
+  grid-area: plus;
+}
+.minus {
+  grid-area: minus;
+}
+.label {
+  grid-area: label;
+}
+.numInput {
+  grid-area: input;
+}
+
+.input button {
+  outline:none;
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: none;
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+  margin: 2px;
+  position: relative;
+  padding-top: 10px;
+}
+
+.input button:before,
+.input button:after {
+  display: inline-block;
+  position: absolute;
+  content: '';
+  width: 1rem;
+  height: 2px;
+  background-color: #212121;
+  transform: translate(-50%, -50%);
+}
+.input button.plus:after {
+  transform: translate(-50%, -50%) rotate(90deg);
 }
