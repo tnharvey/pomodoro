@@ -1,7 +1,7 @@
-#Pomodoro Timer
+# Pomodoro Timer
 [View Live](http://tnharvey.github.io/pomodoro/)
 
-Created by [Erick J](https://github.com/ey-Jay) and [Neal H](https://github.com/tnharvey)
+*Created by [Erick J](https://github.com/ey-Jay) and [Neal H](https://github.com/tnharvey)*
 
 This project was created for [The Odin Project (TOP) pair programming project](https://www.theodinproject.com/courses/web-development-101/lessons/pairing-project).
 
