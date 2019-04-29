@@ -9,5 +9,9 @@ A [pomodoro timer](https://en.wikipedia.org/wiki/Pomodoro_Technique) is a produc
 sessions, the fourth break is then a long break for recovery. We strove for simplicity in design, eliminating unnecessary buttons or displays. The layout
 is also responsive, and should perform well across platforms as well.
 
+Current Features:
+- Circles on left track current out of 4 sessions
+- Each session chimes at the end, and a different chime sounds for long break
+
 Future Features:
 - Impliment as Google Chrome Extension
